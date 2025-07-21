@@ -1,7 +1,6 @@
 let map;
 
 async function initMap() {
-
   const position = { lat: 54.32402729460852, lng: 10.452273490893967 };
 
   const { Map } = await google.maps.importLibrary("maps");

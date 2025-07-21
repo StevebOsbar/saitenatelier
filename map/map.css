@@ -4,10 +4,9 @@
  */
 #map {
   height: 300px;
-    width: 300px;
-    margin: auto;
-    display: block;
-
+  width: 300px;
+  margin: auto;
+  display: block;
 }
 
 /* 
@@ -17,12 +16,11 @@ html,
 body {
   height: 100%;
   margin: 0;
-object-position: center;
-    padding: 0;
-    
+  object-position: center;
+  padding: 0;
 }
 .map-container {
-    padding: 24px;
+  padding: 24px;
   display: flex;
   justify-content: center;
   align-items: center;

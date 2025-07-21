@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="./map.css" />
     <script type="module" src="./map.js"></script>
+    <script type="module" src="./cookies.js"></script>
   </head>
   <body>
     <img
@@ -58,16 +59,26 @@
       <br />
       <br />
 
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.8493060954365!2d10.4521365!3d54.3242954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b28b7a9c716e8b%3A0xe14a92eea7505854!2sSaitenatelier%20Instrumentenwerkstatt!5e0!3m2!1sde!2sde!4v1753082230103!5m2!1sde!2sde"
-        width="450"
-        height="330"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+      <div
+        style="
+          width: 450px;
+          height: 330px;
+          background-color: lightslategray;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 14px;
+          box-sizing: border-box;
+          margin-inline: auto;
+        "
+        id="map-placeholder"
       >
-      </iframe>
+        <p style="color: white">
+          Bitte stimme der Anzeige der Karte zu, um sie zu laden.
+        </p>
+        <button id="map-placeholder-accept">Google Map anzeigen</button>
+      </div>
 
       <div>
         <h2>Anfahrt</h2>
@@ -89,5 +100,39 @@
         />
       </div>
     </div>
+
+    <script>
+      const mapIframe = `
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.8493060954365!2d10.4521365!3d54.3242954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b28b7a9c716e8b%3A0xe14a92eea7505854!2sSaitenatelier%20Instrumentenwerkstatt!5e0!3m2!1sde!2sde!4v1753082230103!5m2!1sde!2sde"
+              width="450"
+              height="330"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+      `;
+
+      const container = document.getElementById("map-placeholder");
+      const acceptBtn = document.getElementById("map-placeholder-accept");
+
+      const localStorageKey = "mapAccepted";
+
+      const replacePlaceholderWithMap = () => {
+        container.insertAdjacentHTML("afterend", mapIframe);
+        container.remove();
+      };
+
+      acceptBtn.addEventListener("click", () => {
+        replacePlaceholderWithMap();
+        window.localStorage.setItem(localStorageKey, "true");
+      });
+
+      if (window.localStorage.getItem(localStorageKey) === "true") {
+        replacePlaceholderWithMap();
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,173 @@
+body {
+  font-family: "Merriweather", serif;
+  background-blend-mode: normal;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.2em;
+  color: #5c5c5c;
+}
+
+a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #cfcfcf;
+  border-radius: 5px;
+}
+a:hover {
+  background-color: #b0b0b0;
+  text-decoration: none;
+}
+
+.navigation {
+  margin-bottom: 24px;
+}
+
+.insta-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.coins {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.contact {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.home-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+}
+
+.imprint {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.navigation a {
+  font-size: 1.2em;
+}
+.navigation img {
+  vertical-align: middle;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+.toplogo {
+  width: 200px;
+  height: auto;
+}
+
+.navigation a:hover img {
+  filter: brightness(0.8);
+}
+.navigation a:hover .insta-icon,
+.navigation a:hover .coins,
+.navigation a:hover .contact,
+.navigation a:hover .home-icon,
+.navigation a:hover .imprint {
+  filter: brightness(0.8);
+}
+
+.desktop-top-parent,
+.desktop-bottom-parent,
+.desktop-bundles-parent {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.desktop-top-child-1,
+.desktop-top-child-2,
+.desktop-bottom-child-1,
+.desktop-bottom-child-2 {
+  flex: 1 1 auto;
+  min-width: 300px;
+  box-sizing: content-box;
+  padding-bottom: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.desktop-bundles-child-1,
+.desktop-bundles-child-2 {
+  flex: 1 1 100%;
+  min-width: 300px;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.desktop-top-child-1 h2,
+.desktop-top-child-2 h2,
+.desktop-bottom-child-1 h2,
+.desktop-bottom-child-2 h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.angebotbtn:hover {
+  background: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%)
+    right;
+  background-size: 200% auto;
+  background-position: right center;
+  transition: background 0.6s ease;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-prices-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.header-prices-child-1,
+.header-prices-child-2 {
+  flex: 1 1 100%;
+  min-width: 300px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}

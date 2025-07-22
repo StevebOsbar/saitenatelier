@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saitenatelier Instrumentenwerkstatt</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./cookies.js"></script>
+    <style>
+      /*Das mit dem animierten gradient ist nur ein Test*/
+      .angebotbtn {
+        display: inline-block;
+        padding: 0px 0px;
+        /*background-image: linear-gradient(
+          to right,
+          #2b5876 0%,
+          #4e4376 51%,
+          #2b5876 100%
+        );*/
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 0px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS will be loaded before closing body tag for better performance -->
+
+    <style>
+      .swiper {
+        width: 100%;
+        height: 500px;
+        margin: 10px auto;
+        padding-top: 50px;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".swiper", {
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img
+      class="toplogo"
+      src="img/saitenatelier-high-resolution-logo-transparent.png"
+      alt=""
+    />
+
+    <div class="navigation">
+      <a href="index.html"
+        >Home
+        <img class="home-icon" src="img/house-chimney-solid.svg" alt="" />
+      </a>
+      <a href="prices.html"
+        >Preise
+        <img class="coins" src="img/coins-solid.svg" alt="" />
+      </a>
+
+      <a href="contact.html"
+        >Kontakt
+        <img class="contact" src="img/address-card-solid.svg" alt="" />
+      </a>
+      <a href="https://www.instagram.com/saitenatelier" target="_blank"
+        >Instagram
+        <img class="insta-icon" src="img/square-instagram-brands.svg" alt="" />
+      </a>
+      
+      <h2>Willkommen im Saitenatelier!</h2>
+      <p>
+        Deiner professionellen Instrumentenwerkstatt direkt am Selenter See!
+        <br />
+      </p>
+
+      <br />
+      <br />
+
+      <p>
+        Ich biete dir eine breite Palette an Dienstleistungen rund um Gitarre,
+        Bass und Co. an. <br /><br />
+        Egal ob Saitenwechsel, Bundarbeiten oder Elektronikreparaturen - bei mir
+        bekommt dein Instrument das Rundum-sorglos-Paket. <br />
+        <br /><br />
+
+        Schau dir gerne mein<a class="angebotbtn" href="prices.html">Angebot</a
+        >an und kontaktiere mich bei Fragen oder zur Terminvereinbarung.<br />
+      </p>
+    </div>
+    <div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="img/Bild1_Schleifen.jpg"
+              alt=""
+              style="max-height: 100%"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/Bild2_Löten.png" alt="" style="max-height: 100%" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/Bild3_Feilen.png" alt="" style="max-height: 100%" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <img
+      class="logo"
+      src="img/saitenatelier-high-resolution-logo-transparent.png"
+      alt=""
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <div class="footer">
+      <a href="data.html">Datenschutzerklärung</a>
+        <a href="imprint.html">Impressum</a>
+
+  </div>
+  
+  </body>
+</html>

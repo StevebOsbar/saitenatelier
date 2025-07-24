@@ -21,13 +21,15 @@ a {
   margin: 10px;
   padding: 10px 20px;
   text-decoration: none;
-  color: hsl(0, 0%, 30%);
-  background-color: hsl(0, 0%, 95%);
-  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 10px;
 }
 a:hover {
-  background-color: hsl(0, 0%, 85%);
+  color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 0%);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .navigation {
@@ -136,6 +138,25 @@ a:hover {
   align-content: center;
   text-align: center;
 
+}
+
+.email-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+ 
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.phone-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 html {

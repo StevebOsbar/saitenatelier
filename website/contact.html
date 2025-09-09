@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./map.css" />
+        <meta name="description" content="Kontaktseite der Saitenatelier Instrumentenwerkstatt in Kiel. Kontaktiere mich bei Fragen oder für Terminvereinbarungen.">
+        <script type="module" src="./cookies.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+        </head>
+  <body>
+    <img
+      class="toplogo"
+      src="img/saitenatelier-high-resolution-logo-transparent.webp"
+      alt=""
+    />
+    <nav class="navigation">
+        <ul>
+          <li>
+            <a href="index.html">
+              Home
+              <img
+                class="home-icon"
+                src="img/house-chimney-solid.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="prices.html"
+              >Preise
+              <img
+                class="coins"
+                src="img/coins-solid.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="contact.html"
+              >Kontakt
+              <img
+                class="contact"
+                src="img/address-card-solid.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/saitenatelier" target="_blank"
+              >Instagram
+              <img
+                class="insta-icon"
+                src="img/square-instagram-brands.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    <div>
+      <p>Du hast Fragen oder möchtest einen Termin vereinbaren?</p>
+      <p>Dann kontaktiere mich gerne!</p>
+      <p>Bitte bedenke, dass Termine nur nach vorheriger Vereinbarung wahrgenommen werden können. </p>
+        <a
+          class="mailbtn"
+          href="mailto: service@saitenatelier.de?subject=Kontaktanfrage&body=Hallo, Steven!">
+          <img class="email-icon" src="img/envelope-solid-full.svg" alt="">
+      
+        </a>
+      <a href="https://wa.me/491771727220" target="_blank">
+        <img class="whatsapp-icon" src="img/whatsapp-brands-solid-full.svg" alt="">
+      </a>
+      <a href="tel:+491771727220">
+      <img class="phone-icon" src="img/phone-flip-solid-full.svg" alt="">
+      </a>
+      <br />
+      <br />
+      <div
+        style="
+          width: 450px;
+          height: 330px;
+          background-color: hsl (0, 0%, 5%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 14px;
+          box-sizing: border-box;
+          margin-inline: auto;
+        "
+        id="map-placeholder"
+      >
+        <p style="color: white">
+          Bitte stimme der Anzeige der Karte zu, um sie zu laden.
+        </p>
+        <button id="map-placeholder-accept">Google Map anzeigen</button>
+      </div>
+
+      <div>
+        <h2>Anfahrt</h2>
+        <p>
+        Saitenatelier Instrumentenwerkstatt <br />
+        Deichweg 20 <br>
+        Seefestung Friedrichsort <br>  
+        24159 Kiel
+        <br />
+      <br>
+      <br>
+      Hinterlasse mir gerne eine Rezension auf Google: <br> <br>
+      <a href="https://g.page/r/CVRYUKfukkrhEAI/review" target="_blank">
+        Google Rezension
+        <img class="google-icon" src="img/google-brands.svg" alt="" />
+      </a>
+    </div>
+     
+    </div>
+
+    <script>
+      const mapIframe = `
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.985360665547!2d10.183712577217342!3d54.39257357261121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2f8f968f0b187%3A0x1dd15e1c345cf3b!2sDeichweg%2020%2C%2024159%20Kiel!5e0!3m2!1sde!2sde!4v1757268284051!5m2!1sde!2sde"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            `;
+            
+              
+
+      const container = document.getElementById("map-placeholder");
+      const acceptBtn = document.getElementById("map-placeholder-accept");
+
+      const localStorageKey = "mapAccepted";
+
+      const replacePlaceholderWithMap = () => {
+        container.insertAdjacentHTML("afterend", mapIframe);
+        container.remove();
+      };
+
+      acceptBtn.addEventListener("click", () => {
+        replacePlaceholderWithMap();
+        window.localStorage.setItem(localStorageKey, "true");
+      });
+
+      if (window.localStorage.getItem(localStorageKey) === "true") {
+        replacePlaceholderWithMap();
+      }
+    </script>
+
+  <footer class="footer">
+      <img
+        class="logo"
+        src="img/saitenatelier-high-resolution-logo-transparent.webp"
+        alt="Saitenatelier Logo"
+      />
+
+      <ul>
+        <li>
+          <a href="data.html">Datenschutzerklärung</a>
+        </li>
+        <li>
+          <a href="imprint.html">Impressum</a>
+        </li>
+      </ul>
+    </footer>
+
+  </body>
+</html>

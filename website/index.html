@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saitenatelier Instrumentenwerkstatt</title>
+    <meta
+      name="description"
+      content="Professionelle Instrumentenwerkstatt in der Festung Friedrichsort in Kiel. Reparatur und Wartung von Gitarren, Bässen und anderen Saiteninstrumenten. Saitenwechsel, Bundarbeiten, Elektronikreparaturen - Ihr Rundum-sorglos-Paket für Musikinstrumente."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saitenatelier.de/" />
+    <meta
+      property="og:title"
+      content="Saitenatelier - Professionelle Instrumentenwerkstatt"
+    />
+    <meta
+      property="og:description"
+      content="Professionelle Instrumentenwerkstatt in Kiel. Reparatur und Wartung von Gitarren, Bässen und anderen Saiteninstrumenten."
+    />
+    <meta
+      property="og:image"
+      content="https://saitenatelier.de/img/saitenatelier-high-resolution-logo-transparent.webp"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://saitenatelier.de/" />
+    <meta
+      property="twitter:title"
+      content="Saitenatelier - Professionelle Instrumentenwerkstatt"
+    />
+    <meta
+      property="twitter:description"
+      content="Professionelle Instrumentenwerkstatt in Kiel. Reparatur und Wartung von Gitarren, Bässen und anderen Saiteninstrumenten."
+    />
+    <meta
+      property="twitter:image"
+      content="https://saitenatelier.de/img/saitenatelier-high-resolution-logo-transparent.webp"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./cookies.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        class="toplogo"
+        src="img/saitenatelier-high-resolution-logo-transparent.webp"
+        alt="Saitenatelier Logo"
+      />
+
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a href="index.html">
+              Home
+              <img
+                class="home-icon"
+                src="img/house-chimney-solid.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="prices.html"
+              >Preise
+              <img
+                class="coins"
+                src="img/coins-solid.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="contact.html"
+              >Kontakt
+              <img
+                class="contact"
+                src="img/address-card-solid.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/saitenatelier" target="_blank"
+              >Instagram
+              <img
+                class="insta-icon"
+                src="img/square-instagram-brands.svg"
+                aria-hidden="true"
+                alt="Icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="top-line">
+        <span class="over-line">Willkommen im Saitenatelier!</span>
+        <span>
+          Deiner professionellen Instrumentenwerkstatt in Kiel!
+        </span>
+      </h1>
+
+      <h2 class="main-text">
+        Ich biete eine breite Palette an Dienstleistungen rund um Gitarre, Bass
+        und Co. an. Egal ob Saitenwechsel, Bundarbeiten oder
+        Elektronikreparaturen - bei mir bekommt dein Instrument das
+        Rundum-sorglos-Paket. Schau dir gerne mein
+        <a class="angebotbtn" href="prices.html">Angebot</a> an und kontaktiere
+        mich bei Fragen oder zur Terminvereinbarung.
+      </h2>
+
+      <div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/Bild1_Schleifen.webp"
+                alt="Einpassen einer Stegeinlage"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Bild2_Löten.webp" alt="Löten einer Buchse" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Bild3_Feilen.webp" alt="Kerben eines Sattels" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/martin_steven.webp"
+                alt="Kooperation mit Falckenstein Guitars Kiel"
+              />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <img
+        class="logo"
+        src="img/saitenatelier-high-resolution-logo-transparent.webp"
+        alt="Saitenatelier Logo"
+      />
+
+      <ul>
+        <li>
+          <a href="data.html">Datenschutzerklärung</a>
+        </li>
+        <li>
+          <a href="imprint.html">Impressum</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".swiper", {
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

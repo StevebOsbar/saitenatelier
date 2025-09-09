@@ -1,7 +1,7 @@
 body {
   font-family: "Merriweather", serif;
   background-blend-mode: normal;
-  color: #333;
+  color: hsl(0, 0%, 20%);
   margin: 0;
   padding: 20px;
   text-align: center;
@@ -12,22 +12,24 @@ h1 {
   margin-bottom: 20px;
 }
 p {
-  font-size: 1.2em;
-  color: #5c5c5c;
+  font-size: 1em;
+  color: hsl(0, 0%, 30%);
 }
 
 a {
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   padding: 10px 20px;
   text-decoration: none;
-  color: #333;
-  background-color: #cfcfcf;
-  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 10px;
 }
 a:hover {
-  background-color: #b0b0b0;
+  color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 0%);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .navigation {
@@ -99,7 +101,8 @@ a:hover {
 
 .desktop-top-parent,
 .desktop-bottom-parent,
-.desktop-bundles-parent {
+.desktop-bundles-parent,
+.pick-up-parent {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -112,18 +115,19 @@ a:hover {
   flex: 1 1 auto;
   min-width: 300px;
   box-sizing: content-box;
-  padding: 1rem;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  padding-bottom: 1rem;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 .desktop-bundles-child-1,
-.desktop-bundles-child-2 {
+.desktop-bundles-child-2,
+.pick-up {
   flex: 1 1 100%;
   min-width: 300px;
   padding: 1rem;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 
@@ -132,21 +136,31 @@ a:hover {
 .desktop-bottom-child-1 h2,
 .desktop-bottom-child-2 h2 {
   font-size: 1.5em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+.email-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.phone-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-.angebotbtn:hover {
-  background: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%)
-    right;
-  background-size: 200% auto;
-  background-position: right center;
-  transition: background 0.6s ease;
-  color: #fff;
-  text-decoration: none;
 }
 
 .header-prices-parent {
@@ -162,5 +176,80 @@ html {
   flex: 1 1 100%;
   min-width: 300px;
   padding: 1rem;
+  border-radius: 10px;
+}
+
+.imprint-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
+.data-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
+.angebotbtn {
+  display: inline-block;
+  padding: 0px 0px;
+  text-decoration: none;
   border-radius: 5px;
+  margin-top: 0px;
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+  margin: 10px auto;
+  padding-top: 50px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation,
+.footer {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-wrap: pretty;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  text-wrap: balance;
+  max-width: 70ch;
+}
+
+.top-line,
+.main-text {
+  margin-inline: auto;
+}
+
+.top-line {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.over-line {
+  font-weight: 400;
 }
